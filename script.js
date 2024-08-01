@@ -1,5 +1,5 @@
 var message_valeur=document.querySelector(".information").children[1];
-var Prenom,Nom,Matricule,email,dateNaissance,Genre,Numero,Password;
+var Prenom,Nom,Matricule,email,dateNaissance,ECOLE,Genre,Numero,Password;
 var valeur;
 //CECI NOUS PERMET DE SELECTIONNER LE 2 EME PARAGRAHPE DANS LA DIV AYANT LA CLASS INFORMATION
 window.onload=()=>{
@@ -31,8 +31,11 @@ switch (element.name) {
     case "email":
         email=element.value;
     break;
-        case "dateNaissance":
+    case "dateNaissance":
         dateNaissance=element.value;
+    break;
+    case "ECOLE":
+        ECOLE=element.value
         break;
     case "Password":
             Password=element.value;
@@ -46,7 +49,7 @@ switch (element.name) {
     
 }
 
-valeur=Prenom+'-'+Nom+'-'+Matricule+'-'+Numero+'-'+email+'-'+dateNaissance+'-'+Password+'-'+Genre;
+valeur=Prenom+'-'+Nom+'-'+Matricule+'-'+Numero+'-'+email+'-'+dateNaissance+'-'+ECOLE+'-'+Password+'-'+Genre;
 qr.value=valeur;
 message_valeur.innerHTML=qr.value;
 

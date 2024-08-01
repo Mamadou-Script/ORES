@@ -1,0 +1,37 @@
+h1 {
+            font: 800 40px/1.1 'Arial Black', sans-serif;
+            text-align: center;
+            background-color:  blueviolet;
+            position: relative;
+            border: 1px solid #bbb;
+            border-radius: 10px;
+            padding: 0 50px 10px 50px;
+        }
+        .background {
+            background: rgb(34, 34, 83);
+        }
+        .text {
+            position: relative;
+        }
+        .invert {
+            background: white;
+            mix-blend-mode: difference;
+        }
+        .invert,
+        .background {
+            position: absolute;
+            top: 0;
+            right: 50%;
+            bottom: 0;
+            left: 0;
+            border-radius: 10px 0 0 10px;
+            animation: slide 3s ease-in-out infinite alternate;
+        }
+        @keyframes slide {
+            from{
+                right: 10%;
+            }
+            to {
+                right: 90%;
+            }
+        }
